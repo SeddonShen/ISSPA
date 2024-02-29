@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: VitePress
+title: ISSPA
 titleTemplate: Vite & Vue Powered Static Site Generator
 
 hero:
-  name: VitePress
+  name: ISSPA
   text: Vite & Vue Powered Static Site Generator
   tagline: Simple, powerful, and fast. Meet the modern SSG framework you've always wanted.
   actions:
@@ -17,7 +17,7 @@ hero:
       link: https://github.com/vuejs/vitepress
   image:
     src: /vitepress-logo-large.webp
-    alt: VitePress
+    alt: ISSPA
 
 features:
   - icon: 📝

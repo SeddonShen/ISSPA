@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: VitePress
+title: ISSPA
 titleTemplate: 由 Vite 和 Vue 驱动的静态站点生成器
 
 hero:
-  name: VitePress
+  name: ISSPA
   text: 由 Vite 和 Vue 驱动的静态站点生成器
   tagline: 简单、强大、快速。就是你想要的现代 SSG 框架！
   actions:
@@ -17,7 +17,7 @@ hero:
       link: https://github.com/vuejs/vitepress
   image:
       src: /vitepress-logo-large.webp
-      alt: VitePress
+      alt: ISSPA
 
 features:
   - icon: 📝
