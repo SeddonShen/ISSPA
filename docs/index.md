@@ -40,9 +40,10 @@ features:
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  /* --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff); */
+  --vp-home-hero-name-background: -webkit-linear-gradient(315deg,#647eff 25%,#42d392);
+  /* --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%); */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #647eff 50%,  #42d392 50%);
   --vp-home-hero-image-filter: blur(44px);
 }
 
