@@ -43,4 +43,19 @@ cd /home/$USER/ISSPA
 catkin_make
 ```
 
-    
+::: tip NOTE
+
+You can also use ```catkin_make_isolated``` or ```catkin``` for compilation. ROS provides a number of compilation tools, the differences and advantages 
+    of which are described at [here](./compilation-tools).
+:::
+
+When executing ```catkin_make```, you may encounter some problems. Common **Issues & Troubleshooting** can be found [here](./issue-and-troubleshooting).
+::: tip NOTE
+   **Warm reminder:** Please remember to refresh the environment variables before using the program.
+   Alternatively, storing them in ```~/.bashrc`` is fine.
+```bash
+cd /home/$USER/ISSPA
+source devel/setup.bash
+# echo "source ~/ISSPA/devel/setup.bash" >> ~/.bashrc
+```
+:::
