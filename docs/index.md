@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/getting-started
+      link: /guide/quick-start
     - theme: alt
       text: View on GitHub
       link: https://github.com/chenhengwei1999/ISSPA

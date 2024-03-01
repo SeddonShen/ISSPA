@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /zh/guide/getting-started
+      link: /zh/quick-start
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
