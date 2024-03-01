@@ -59,49 +59,51 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Tutorials',
       collapsed: false,
       items: [
-        { text: 'What is VitePress?', link: 'what-is-vitepress' },
-        { text: 'Getting Started', link: 'getting-started' },
-        { text: 'Routing', link: 'routing' },
-        { text: 'Deploy', link: 'deploy' }
+        { text: 'Quick Start', link: 'quick-start' },
+        { text: 'User Manual Collection', link: 'user-manual-collection' }
       ]
     },
     {
-      text: 'Writing',
+      text: 'ISSPA Components',
       collapsed: false,
       items: [
-        { text: 'Markdown Extensions', link: 'markdown' },
-        { text: 'Asset Handling', link: 'asset-handling' },
-        { text: 'Frontmatter', link: 'frontmatter' },
-        { text: 'Using Vue in Markdown', link: 'using-vue' },
-        { text: 'Internationalization', link: 'i18n' }
+        { text: 'Chassis', link: 'chassis' },
+        { text: 'Sensors', link: 'sensors' },
+        { text: 'Mapping', link: 'mapping' },
+        { text: 'Navigation', link: 'navigation' },
+        { text: 'Segmentation', link: 'segmentation' }
       ]
     },
     {
-      text: 'Customization',
+      text: 'ISSPA Appendix',
       collapsed: false,
       items: [
-        { text: 'Using a Custom Theme', link: 'custom-theme' },
+        { text: 'PAVS User Manual', link: 'pavs-user-manual' },
         {
-          text: 'Extending the Default Theme',
-          link: 'extending-default-theme'
+          text: 'ISSPA Libraries(Python and C++)',
+          link: 'isspa-libraries'
         },
-        { text: 'Build-Time Data Loading', link: 'data-loading' },
-        { text: 'SSR Compatibility', link: 'ssr-compat' },
-        { text: 'Connecting to a CMS', link: 'cms' }
+        { text: 'Compilation Tools', link: 'compilation-tools' },
+        { text: 'Issue and Troubleshooting', link: 'issue-and-troubleshooting' }
       ]
     },
     {
-      text: 'Experimental',
+      text: 'Contributed to ISSPA',
       collapsed: false,
       items: [
-        { text: 'MPA Mode', link: 'mpa-mode' },
-        { text: 'Sitemap Generation', link: 'sitemap-generation' }
+        { text: 'Mapping Plugin', link: 'mapping-plugin' },
+        { text: 'Navigation Plugin', link: 'navigation-plugin' },
+        { text: 'Object Detection Plugin', link: 'object-detection-plugin' }
       ]
     },
-    { text: 'Config & API Reference', base: '/reference/', link: 'site-config' }
+    {
+      text: 'About',
+      collapsed: false,
+      items: [{ text: 'Team', link: 'team' }]
+    }
   ]
 }
 
