@@ -1,24 +1,12 @@
-# VitePress 📝💨
-
-[![test](https://github.com/vuejs/vitepress/workflows/Test/badge.svg)](https://github.com/vuejs/vitepress/actions)
-[![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
-[![chat](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://chat.vuejs.org)
+# ISSPA 📝
 
 ---
 
-VitePress is a Vue-powered static site generator and a spiritual successor to [VuePress](https://vuepress.vuejs.org), built on top of [Vite](https://github.com/vitejs/vite).
+ISSPA (Intelligent Self-driving System empowering Physical Agents) is an experimental platform for self-driving physical agents.
 
-## Documentation
+## Introduction
 
-To check out docs, visit [vitepress.dev](https://vitepress.dev).
-
-## Changelog
-
-Detailed changes for each release are documented in the [CHANGELOG](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md).
-
-## Contribution
-
-Please make sure to read the [Contributing Guide](https://github.com/vuejs/vitepress/blob/main/.github/contributing.md) before making a pull request.
+ISSPA (Intelligent Self-driving System empowering Physical Agents) is an experimental platform for self-driving physical agents, which was originally designed to facilitate researchers by creating baseline solutions that are easy to use, algorithmically verifiable, and modularly extensible. And it was built under the leadership of the [TIS Lab](https://tis.ios.ac.cn/), of which the team members are listed in [Team](https://isspa.readthedocs.io/en/latest/about_us/team.html).
 
 ## License
 

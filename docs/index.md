@@ -2,12 +2,12 @@
 layout: home
 
 title: ISSPA
-titleTemplate: Vite & Vue Powered Static Site Generator
+titleTemplate: Intelligent Self-driving System empowering Physical Agents
 
 hero:
   name: ISSPA
-  text: Vite & Vue Powered Static Site Generator
-  tagline: Simple, powerful, and fast. Meet the modern SSG framework you've always wanted.
+  text: Intelligent Self-driving System empowering Physical Agents
+  tagline: An experimental platform for self-driving physical agents
   actions:
     - theme: brand
       text: Get Started
