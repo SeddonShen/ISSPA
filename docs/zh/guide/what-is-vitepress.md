@@ -4,7 +4,7 @@ VitePress 是一个[静态站点生成器](https://en.wikipedia.org/wiki/Static_
 
 <div class="tip custom-block" style="padding-top: 8px">
 
-只是想尝试一下？跳到[快速开始](./getting-started)。
+只是想尝试一下？跳到[快速开始](./quick-start)。
 
 </div>
 
