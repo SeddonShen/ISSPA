@@ -14,7 +14,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/chenhengwei1999/ISSPA
   image:
     src: /vitepress-logo-large.webp
     alt: ISSPA

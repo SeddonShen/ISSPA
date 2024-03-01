@@ -1,7 +1,5 @@
 # ISSPA 📝
 
----
-
 ISSPA (Intelligent Self-driving System empowering Physical Agents) is an experimental platform for self-driving physical agents.
 
 ## Introduction
@@ -12,4 +10,4 @@ ISSPA (Intelligent Self-driving System empowering Physical Agents) is an experim
 
 [MIT](https://github.com/vuejs/vitepress/blob/main/LICENSE)
 
-Copyright (c) 2019-present, Yuxi (Evan) You
+Copyright (c) 2024-present, ISSPA Team
