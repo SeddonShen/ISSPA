@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { search as zhSearch } from './zh'
 
 export const shared = defineConfig({
-  title: 'VitePress',
+  title: 'ISSPA',
 
   lastUpdated: true,
   cleanUrls: true,
