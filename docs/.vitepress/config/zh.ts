@@ -17,7 +17,7 @@ export const zh = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://github.com/SeddonShen/ISSPA/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
     },
 
@@ -69,11 +69,11 @@ function nav(): DefaultTheme.NavItem[] {
       items: [
         {
           text: '更新日志',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
+          link: 'https://github.com/SeddonShen/ISSPA/blob/main/CHANGELOG.md'
         },
         {
           text: '参与贡献',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
+          link: 'https://github.com/SeddonShen/ISSPA/blob/main/.github/contributing.md'
         }
       ]
     }

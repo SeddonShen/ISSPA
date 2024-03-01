@@ -8,6 +8,6 @@ ISSPA (Intelligent Self-driving System empowering Physical Agents) is an experim
 
 ## License
 
-[MIT](https://github.com/vuejs/vitepress/blob/main/LICENSE)
+[MIT](https://github.com/SeddonShen/ISSPA/blob/main/LICENSE)
 
 Copyright (c) 2024-present, ISSPA Team

@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/chenhengwei1999/ISSPA
+    - theme: alt
+      text: ISSPA Studio
+      link: https://isspa.0vo.lol
   image:
     src: /vitepress-logo-large.webp
     alt: ISSPA

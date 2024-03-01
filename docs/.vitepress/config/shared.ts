@@ -21,7 +21,7 @@ export const shared = defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://vitepress.dev',
+    hostname: 'https://iss.0vo.lol',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
     }
@@ -45,7 +45,7 @@ export const shared = defineConfig({
     logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/chenhengwei1999/ISSPA/' }
     ],
 
     search: {
