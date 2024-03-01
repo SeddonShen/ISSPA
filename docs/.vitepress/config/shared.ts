@@ -56,8 +56,6 @@ export const shared = defineConfig({
         indexName: 'vitepress',
         locales: { ...zhSearch }
       }
-    },
-
-    carbonAds: { code: 'CEBDT27Y', placement: 'vuejsorg' }
+    }
   }
 })
