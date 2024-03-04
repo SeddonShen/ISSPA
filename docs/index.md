@@ -28,13 +28,13 @@ features:
     details: Selection of solutions based on the application scenarios, such as grid maps or high-definition maps.
   - icon: 🌐
     title: Cloud Access
-    details: Remote research and development is achieved by accessing the interior of the vehicle via a web page, while browsing visualization data such as point cloud maps.
+    details: Remote research and development in the cloud to browse visualization data like point cloud maps.
   - icon: 👨‍💻
     title: Code Tutorials
     details: Introduces ISSPA in the form of code snippets so that you can use it easily.
   - icon: 🔍
     title: Research Oriented
-    details: Build an indoor sand table and design corner cases of automated driving, such as lane line damage, to aid in research experiments.
+    details: Create an indoor sand table to simulate corner cases of automated driving, like damaged lane lines, for research.
 ---
 
 <style>
