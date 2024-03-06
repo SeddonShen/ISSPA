@@ -56,7 +56,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: '指南',
-      link: '/zh/guide/what-is-vitepress',
+      link: '/zh/guide/quick-start',
       activeMatch: '/zh/guide/'
     },
     {

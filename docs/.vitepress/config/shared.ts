@@ -29,8 +29,8 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-mini.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
@@ -42,7 +42,7 @@ export const shared = defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
+    logo: { src: '/logo-mini.svg', width: 24, height: 24 },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chenhengwei1999/ISSPA/' }

@@ -32,7 +32,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: 'Guide',
-      link: '/guide/what-is-vitepress',
+      link: '/guide/quick-start',
       activeMatch: '/guide/'
     },
     {

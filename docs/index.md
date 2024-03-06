@@ -19,7 +19,7 @@ hero:
       text: ISSPA Studio
       link: https://isspa.0vo.lol
   image:
-    src: /vitepress-logo-large.webp
+    src: /car.png
     alt: ISSPA
 
 features:
