@@ -35,6 +35,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/guide/'
     },
     {
+      text: 'Agents',
+      link: '/agents',
+      activeMatch: '/agents/'
+    },
+    {
       text: pkg.version,
       items: [
         {
