@@ -16,6 +16,6 @@ The results of semantic segmentation can also help the system recognize the loca
 
 Vehicle segmentation is a task in autonomous driving aimed at accurately separating the area occupied by vehicles from images or videos. Its results can provide crucial perceptual information to autonomous driving systems, aiding vehicles in understanding the surrounding environment and making appropriate decisions.
 
-::: note
+::: tip NOTE
 The BEV-based algorithm has undergone simulation testing in ISSPA and will be synchronized with the code repository as soon as possible.
 :::
