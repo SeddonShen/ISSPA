@@ -6,7 +6,8 @@ The team members have varied professional backgrounds and brief biographies are 
 
   His research primarily focuses on the safety of the intended functionality (SOTIF) and object detection of autonomous vehicles.
   
-- **Quanzhong Li:** 
+- **Quanzhong Li:**
+
   His research primarily centers around safe reinforcement learning, as well as planning and control for autonomous vehicles.
 
 - **Qisong He:** 
