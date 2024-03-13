@@ -17,7 +17,7 @@ There are many ways to connect to a vehicle's internal port, such as through `VN
 
 When first familiarizing yourself with the vehicle software framework, we recommend that you use a monitor plugged into the on-board computing board (e.g., NVIDIA Computer's HDMI connector), which provides a visual interface for familiarizing yourself with the internal operating system.
 
-::: note
+::: tip NOTE
 Reserve at least one USB port for the keyboard and mouse kit, which can help you with wireless network configuration and so on.
 :::
 
@@ -27,7 +27,7 @@ The command line usage of SSH is as follows:
 ```bash
 ssh jetson@192.168.xx.xx
 ```
-::: note
+::: tip NOTE
 The default username is **jetson**, and the default password is **iscas**.
 :::
 
