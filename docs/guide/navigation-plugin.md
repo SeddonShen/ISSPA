@@ -11,9 +11,7 @@ As of now, ISSPA has integrated some baseline algorithms as shown below:
 | PSO            | ...           |
 
 ::: tip NOTE
-    PSO: Particle Swarm Optimization; 
-    TEB: Timed Elastic Band; 
-    DWA: Dynamic Window Approach; 
+PSO: Particle Swarm Optimization; TEB: Timed Elastic Band; DWA: Dynamic Window Approach; 
 :::
 
 ## Adding Plugins
