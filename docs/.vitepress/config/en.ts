@@ -35,6 +35,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/guide/'
     },
     {
+      text: 'Playground',
+      link: '/playground',
+      activeMatch: '/playground/'
+    },
+    {
       text: 'Agents',
       link: '/agents',
       activeMatch: '/agents/'
