@@ -9,8 +9,8 @@ import { onMounted } from 'vue';
 const loadPlayer = () => {
   var player = new Aliplayer({
         id: 'J_prismPlayer1',
-        source: 'https://player.alicdn.com/video/aliyunmedia.mp4', // 播放地址，使用超低延时直播（RTS）地址，协议是artc://。
-        isLive: false, // 是否为直播播放。
+        source: 'artc://camera.0vo.lol/ISSPA01/ISSPA01?auth_key=1711269114-0-0-aa102080d5f0a506cb86d0bf07c39d58', // 播放地址，使用超低延时直播（RTS）地址，协议是artc://。
+        isLive: true, // 是否为直播播放。
         // rtsVersion: 'x.x.x', //可以手动指定RTS SDK的版本。
       }, function (player) {
         console.log('The player is created.')
