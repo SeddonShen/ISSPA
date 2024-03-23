@@ -1,17 +1,45 @@
 <script lang="ts" setup>
-// import $ from "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js";
+import Aliplayer from 'aliyun-aliplayer';
+import 'aliyun-aliplayer/dist/skins/default/aliplayer-min.css'
 import ArcoVue from '@arco-design/web-vue';
-import { Collapse, CollapseItem, Row , Col} from '@arco-design/web-vue';
+import { Spin, Collapse, CollapseItem, Row , Col} from '@arco-design/web-vue';
+import { onMounted } from 'vue';
 // import '@arco-design/web-vue/dist/arco.css';
 // const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const loadPlayer = () => {
+  var player = new Aliplayer({
+        id: 'J_prismPlayer1',
+        source: 'https://player.alicdn.com/video/aliyunmedia.mp4', // 播放地址，使用超低延时直播（RTS）地址，协议是artc://。
+        isLive: false, // 是否为直播播放。
+        // rtsVersion: 'x.x.x', //可以手动指定RTS SDK的版本。
+      }, function (player) {
+        console.log('The player is created.')
+      });
+      var spin = document.getElementById('J_prismPlayer1_spin1');
+      spin.parentNode.removeChild(spin);
+    }
+
+onMounted(() => {
+  console.log('mounted')
+  // call loadPlayer() func after 1000ms
+  setTimeout(() => {
+    loadPlayer()
+  }, 1000)
+    // delect element which id is J_prismPlayer1_spin1
+
+    // console.log('player', player)
+})
+
 console.log('ArcoVue', ArcoVue)
 </script>
 <template>
+<div id="J_prismPlayer"></div>
 <Collapse :default-active-key="['1', '2']" style="margin: 5rem;">
     <CollapseItem header="Automotive Software Innovation Center(ASIC), Chongqing, China" key="1">
-      <Row class="grid-demo" justify="center">
+      <Row class="grid-player" justify="center">
       <Col :span="10">
-        <div>col - 8</div>
+        <div id="J_prismPlayer1"></div>
+        <Spin id="J_prismPlayer1_spin1" tip="Loading Web Camera..."/>
       </Col>
       <Col :span="1"></Col>
       <Col :span="10">
@@ -26,18 +54,23 @@ console.log('ArcoVue', ArcoVue)
 
 </template>
 <style scoped>
-.grid-demo {
-  background-color: var(--color-fill-2);
-  margin-bottom: 40px;
+.grid-player {
+  /* background-color: var(--color-fill-2); */
+  display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 300px; /* 设置容器高度 */
+    text-align: center;
+  /* margin-bottom: 40px; */
 }
-.grid-demo:last-child {
+/* .grid-demo:last-child {
   margin-bottom: 0px;
-}
-.grid-demo .arco-col {
-  height: 48px;
+} */
+/* .grid-demo .arco-col {
+  height: 10rem;
   line-height: 48px;
   color: var(--color-danger-light-3);
   text-align: center;
-}
+} */
 
 </style>
