@@ -61,6 +61,6 @@ catkin_make_isolated --install --use-ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=Yes
 ROS build systems have undergone continuous evolution, from the traditional rosbuild to the current state-of-the-art colcon, enhancing efficiency and flexibility in software development for robotics.
 
 ## References
-ROS Build Systems
+- [ROS Build Systems](https://www.ros.org/reps/rep-0128.html)
 
-catkin_make vs catkin_make_isolated
+- [catkin_make vs catkin_make_isolated](https://answers.ros.org/question/320613/catkin_make-vs-catkin_make_isolated-which-is-preferred/)
