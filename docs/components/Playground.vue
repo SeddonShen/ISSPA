@@ -8,7 +8,7 @@ import { getModeForUsageLocation } from 'typescript';
 // import '@arco-design/web-vue/dist/arco.css';
 // const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function get_video_url(): Promise<string> {
-  const host_url = 'http://42.192.133.34:3309/get_video';
+  const host_url = 'https://getvideo.0vo.lol/';
 
   return fetch(host_url)
     .then(response => {
