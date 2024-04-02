@@ -7,9 +7,7 @@ import { onMounted } from 'vue';
 import { getModeForUsageLocation } from 'typescript';
 // import '@arco-design/web-vue/dist/arco.css';
 // const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-function get_video_url(): Promise<string> {
-  const host_url = 'https://getvideo.0vo.lol/';
-
+function get_video_url(host_url): Promise<string> {
   return fetch(host_url)
     .then(response => {
       if (!response.ok) {
@@ -27,24 +25,31 @@ function get_video_url(): Promise<string> {
     });
 }
 
-const loadPlayer = (video_url) => {
+const loadPlayer = (video_url, player_id) => {
   var player = new Aliplayer({
-    id: 'J_prismPlayer1',
+    id: player_id,
     source: video_url, // 播放地址，使用超低延时直播（RTS）地址，协议是artc://。
     isLive: true, // 是否为直播播放。
     // rtsVersion: 'x.x.x', //可以手动指定RTS SDK的版本。
   }, function (player) {
-    console.log('The player is created.')
+    console.log('The player ' + player_id + 'is created.')
   });
-  var spin = document.getElementById('J_prismPlayer1_spin1');
+  var spin = document.getElementById(player_id + '_spin');
   spin.parentNode.removeChild(spin);
 }
 
 onMounted(() => {
   console.log('mounted')
-  get_video_url().then(video_url => {
+  const host_url = 'https://getvideo.0vo.lol/'
+  
+  get_video_url(host_url+'?app=ISSPA01').then(video_url => {
     setTimeout(() => {
-      loadPlayer(video_url)
+      loadPlayer(video_url,'J_prismPlayer1')
+    }, 1000)
+  });
+  get_video_url(host_url+'?app=ISSPA02').then(video_url => {
+    setTimeout(() => {
+      loadPlayer(video_url,'J_prismPlayer2')
     }, 1000)
   });
   // call loadPlayer() func after 1000ms
@@ -62,12 +67,13 @@ onMounted(() => {
       <Row class="grid-player" justify="center">
         <Col :span="10">
         <div id="J_prismPlayer1"></div>
-        <Spin id="J_prismPlayer1_spin1" tip="Loading Web Camera..." />
+        <Spin id="J_prismPlayer1_spin" tip="Loading Web Camera..." />
         </Col>
         <Col :span="1">
         </Col>
         <Col :span="10">
-        <div>col - 8</div>
+        <div id="J_prismPlayer2"></div>
+        <Spin id="J_prismPlayer2_spin" tip="Loading Web Camera..." />
         </Col>
       </Row>
     </CollapseItem>
