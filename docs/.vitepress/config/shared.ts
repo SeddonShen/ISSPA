@@ -50,9 +50,9 @@ export const shared = defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: '8J64VVRP8K',
-        apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
-        indexName: 'vitepress',
+        appId: 'E8DNDI22Y5',
+        apiKey: 'b0eb246e9b415c8b76502cbe6527fe26',
+        indexName: 'iss-0vo',
         locales: { ...zhSearch }
       }
     }
