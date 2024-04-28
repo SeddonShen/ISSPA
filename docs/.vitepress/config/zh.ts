@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  description: '由 Vite 和 Vue 驱动的静态站点生成器',
+  description: 'ISSPA 智能自动驾驶系统',
 
   themeConfig: {
     nav: nav(),
@@ -119,7 +119,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
   ]
 }
-
 
 export const search: DefaultTheme.AlgoliaSearchOptions['locales'] = {
   zh: {
