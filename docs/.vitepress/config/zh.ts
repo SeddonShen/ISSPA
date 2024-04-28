@@ -77,46 +77,51 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '简介',
+      text: '新手入门',
       collapsed: false,
       items: [
-        { text: '什么是 VitePress？', link: 'what-is-vitepress' },
-        { text: '快速开始', link: 'getting-started' },
-        { text: '路由', link: 'routing' },
-        { text: '部署', link: 'deploy' }
+        { text: '快速开始', link: 'quick-start' },
+        { text: '用户手册集', link: 'user-manual-collection' }
       ]
     },
     {
-      text: '写作',
+      text: 'ISSPA组件',
       collapsed: false,
       items: [
-        { text: 'Markdown 扩展', link: 'markdown' },
-        { text: '资源处理', link: 'asset-handling' },
-        { text: 'frontmatter', link: 'frontmatter' },
-        { text: '在 Markdown 使用 Vue', link: 'using-vue' },
-        { text: '国际化', link: 'i18n' }
+        { text: '底盘', link: 'chassis' },
+        { text: '传感器', link: 'sensors' },
+        { text: '地图', link: 'mapping' },
+        { text: '导航', link: 'navigation' },
+        { text: 'Segmentation', link: 'segmentation' }
       ]
     },
     {
-      text: '自定义',
+      text: '附录',
       collapsed: false,
       items: [
-        { text: '自定义主题', link: 'custom-theme' },
-        { text: '扩展默认主题', link: 'extending-default-theme' },
-        { text: '构建时数据加载', link: 'data-loading' },
-        { text: 'SSR 兼容性', link: 'ssr-compat' },
-        { text: '连接 CMS', link: 'cms' }
+        { text: 'PAVS User Manual', link: 'pavs-user-manual' },
+        {
+          text: 'ISSPA Libraries(Python and C++)',
+          link: 'isspa-libraries'
+        },
+        { text: 'Compilation Tools', link: 'compilation-tools' },
+        { text: 'Issue and Troubleshooting', link: 'issue-and-troubleshooting' }
       ]
     },
     {
-      text: '实验性功能',
+      text: '参与贡献',
       collapsed: false,
       items: [
-        { text: 'MPA 模式', link: 'mpa-mode' },
-        { text: 'sitemap 生成', link: 'sitemap-generation' }
+        { text: '地图插件', link: 'mapping-plugin' },
+        { text: '导航插件', link: 'navigation-plugin' },
+        { text: '目标检测插件', link: 'object-detection-plugin' }
       ]
     },
-    { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
+    {
+      text: '关于',
+      collapsed: false,
+      items: [{ text: '团队', link: 'team' }]
+    }
   ]
 }
 
