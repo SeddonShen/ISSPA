@@ -1,58 +1,50 @@
-# 快速开始
+# 快速上手指南
 
-In this tutorial, you will learn how to use the [ISSPA source code](https://github.com/chenhengwei1999/ISSPA)
-and how PA (Pyhsical Agents) are launched! Specifically, the following sections are included:
+本教程将向您介绍如何使用[ISSPA源代码](https://github.com/chenhengwei1999/ISSPA)以及物理代理（PA）的启动方式！具体包含以下内容：
 
-- 开发环境
+- 开发环境配置
+- 工作区构建
 
-- 工作区搭建
+## 开发环境配置
 
+我们推荐使用**Ubuntu 20.04**作为开发系统，并当前采用ROS1 noetic版本，未来工作中我们将升级至ROS2。
 
-## 开发环境
+- **Ubuntu 20.04**
+- **ROS1 noetic**
 
-We recommend using **Ubuntu 20.04** as your development system, ROS1 noetic is the version we use at the moment, 
-and we will upgrade to ROS2 later in our work.
-
-- Ubuntu 20.04
-
-- ROS1 noetic
-
-The following are some of the dependent libraries that need to be installed before the program can be compiled and run:
+在编译和运行程序之前，需安装以下依赖库：
 
 ```bash
 sudo apt update
 sudo apt install libuvc-dev libgoogle-glog-dev ros-noetic-costmap-2d ros-noetic-nav-core libceres-dev
 ```
 
-## 工作区搭建
+## 工作区构建
 
-[ISSPA source code](https://github.com/chenhengwei1999/ISSPA) as our main repository, it is recommended that you first understand its directory structure, 
-which is necessary for later use and development.
+以[ISSPA源代码库](https://github.com/chenhengwei1999/ISSPA)为主要存储库，建议您首先了解其目录结构，这对后续使用和开发至关重要。
 
-First, clone the source code to the ```/home/$USER/``` directory:
+首先，将源代码克隆到```/home/$USER/```目录下：
 
 ```bash
 cd /home/$USER
 git clone https://github.com/chenhengwei1999/ISSPA.git
 ```
 
-Next, use ```catkin_make``` to compile the workspace.
+接着，使用```catkin_make```编译工作区。
 
 ```bash
 cd /home/$USER/ISSPA
 catkin_make
 ```
 
-::: tip NOTE
-
-You can also use ```catkin_make_isolated``` or ```catkin``` for compilation. ROS provides a number of compilation tools, the differences and advantages 
-    of which are described at [here](./compilation-tools).
+::: 提示 注意
+您也可以使用```catkin_make_isolated```或```catkin```进行编译。ROS提供了多种编译工具，它们之间的差异及优势说明可参考[此处](./compilation-tools)。
 :::
 
-When executing ```catkin_make```, you may encounter some problems. Common **Issues & Troubleshooting** can be found [here](./issue-and-troubleshooting).
-::: tip NOTE
-   **Warm reminder:** Please remember to refresh the environment variables before using the program.
-   Alternatively, storing them in ```~/.bashrc`` is fine.
+执行```catkin_make```时，可能会遇到一些问题。常见的**问题与解决办法**可在此查阅[这里](./issue-and-troubleshooting)。
+
+::: 提示 温馨提示
+**请注意：** 在使用程序前，请记得刷新环境变量。或者将其添加到```~/.bashrc```文件中亦可。
 ```bash
 cd /home/$USER/ISSPA
 source devel/setup.bash
