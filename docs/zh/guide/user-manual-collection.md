@@ -1,21 +1,21 @@
-# User Manual Collection
+# 用户手册集合
 
-Once the workspace setup is complete, you can attempt to perform the following tasks, including vehicle chassis start, sensors start, remote control, SLAM, and navigation.
+完成工作区设置后，您可以尝试执行以下任务，包括车辆底盘启动、传感器启动、远程控制、SLAM（即时定位与地图构建）以及导航。
 
-Up to now, the following experimental vehicles are currently supported:
+截至目前，以下实验车辆已获支持：
 
-| Experimental Vehicles   | Highlighted Features   |
-|-------------------------|------------------------|
-| PAV-S                   | 2D SLAM, Navigation    |
+| 实验车辆   | 亮点功能               |
+|------------|-----------------------|
+| PAV-S      | 2D SLAM，导航         |
 
-Below are the user manuals for each of the experimental vehicles.
+以下是各实验车辆的用户手册。
 
-## PAV-S User Manual
+## PAV-S 用户手册
 
-![Model Diagram of PAV-S](./imgs/pavs_structure.jpg)
+![PAV-S结构图](./imgs/pavs_structure.jpg)
 
-Refer [PAV-S User Manual](./pavs-user-manual) for documentation.
+请参考[PAV-S用户手册](./pavs-user-manual)获取文档。
 
-## Issue & Troubleshooting
+## 问题与故障排除
 
-In the process of compiling the program and using the hardware there may be many problems, some common problems can be referred to this document to try to solve, if you do not find a solution at [here](./issue-and-troubleshooting), you can leave a issue in the ISSPA repository.
+在编译程序和使用硬件的过程中可能会遇到许多问题，一些常见问题可参考本文档尝试解决。如未在[此处](./issue-and-troubleshooting)找到解决方案，您可以在ISSPA仓库中提交问题。

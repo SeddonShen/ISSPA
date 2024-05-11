@@ -1,62 +1,62 @@
-# Chassis
+### 底盘
 
 <a style="display: none;" rel="me" href="https://fosstodon.org/@readthedocs">Mastodon</a>
 
-## Preface
+#### 前言
 
-ISSPA's vehicle chassis primarily adopts **Ackermann steering design**, where the rear two wheels serve as drive wheels controlled by motors, while the front two wheels act as steering wheels controlled by a servo motor. This configuration enables basic vehicle maneuvers, including steering, forward, and reverse movements.
+ISSPA的车辆底盘主要采用**阿克曼转向设计**，后方两个轮子作为由电机控制的驱动轮，前方两个轮子则作为由舵机控制的转向轮。这种配置使车辆能够完成包括转向、前进和后退在内的基本行驶操作。
 
-It's worth noting that some motors and servo motors are equipped with encoders, which record the wheel's rotation count and direction. Chassis motion data can be transmitted through a Microcontroller Unit (MCU), which typically provides communication interfaces such as USART, I2C, SPI, capable of receiving data and transmitting control signals (e.g., pulse signals).
+值得注意的是，一些电机和舵机配备了编码器，用于记录车轮的旋转次数和方向。底盘运动数据可通过微控制器单元（MCU）传输，MCU通常提供USART、I2C、SPI等通信接口，可接收数据并发送控制信号（如脉冲信号）。
 
-With an understanding of the chassis, one gains insights into the fundamental operations of ISSPA. In summary, information on the vehicle's motion status can be obtained from the chassis. It is essential to emphasize that acquiring vehicle status is crucial for tasks such as `digital twin`.
+了解底盘，就能洞察到ISSPA的基本运作机制。简而言之，车辆的运动状态信息可从底盘中获取。需要强调的是，获取车辆状态对于实现`数字孪生`等任务至关重要。
 
-Modern automobiles generally employ Ackermann steering design, akin to the chassis of autonomous vehicles. Therefore, our team currently focuses on the development of vehicles with Ackermann chassis. In addition to the Ackermann design, ISSPA plans to incorporate various chassis designs in future work, such as two-wheel differential drive, four-wheel differential drive, four-wheel steering, etc., to meet diverse research needs.
+现代汽车普遍采用与自动驾驶车辆底盘相似的阿克曼转向设计。因此，我们团队目前专注于开发采用阿克曼底盘的车辆。除了阿克曼设计外，ISSPA计划在未来的工作中融入多种底盘设计方案，比如两轮差速驱动、四轮差速驱动、四轮转向等，以满足不同的研究需求。
 
-## MCU
+#### 微控制器单元（MCU）
 
-A Microcontroller Unit (MCU) is a miniature computer system that integrates a central processing unit (CPU), memory (RAM and/or ROM), timers, and input/output ports. **STM32** is a series of 32-bit MCUs based on the ARM Cortex-M core, introduced by STMicroelectronics. It finds wide applications in embedded systems, IoT devices, industrial control systems, and particularly in smart cars.
+微控制器单元（MCU）是一种微型计算机系统，集成了中央处理器（CPU）、内存（RAM和/或ROM）、定时器以及输入/输出端口。**STM32**是STMicroelectronics基于ARM Cortex-M内核推出的32位MCU系列，广泛应用于嵌入式系统、物联网设备、工业控制系统，特别是在智能汽车领域。
 
-In the context of intelligent vehicles, the roles of MCUs like STM32 include:
+在智能车辆的上下文中，STM32等MCU的作用包括：
 
-- Communication Interfaces: MCUs typically integrate various communication interfaces such as UART, SPI, I2C, etc., facilitating data exchange with other devices, sensors, and communication modules. This enables real-time communication with external systems, such as remote controllers and wireless networks.
+- 通信接口：MCU通常集成了UART、SPI、I2C等多种通信接口，便于与其他设备、传感器和通信模块交换数据，实现实时与外部系统（如遥控器和无线网络）的通讯。
 
-- Motor Control: The MCU controls motor drivers, adjusting the speed and direction of the motors. By receiving sensor feedback and executing control algorithms, e.g. **PID**, the MCU ensures that the vehicle travels along the intended path.
+- 电机控制：MCU控制电机驱动器，调节电机的速度和方向。通过接收传感器反馈并执行控制算法（如PID），MCU确保车辆沿预定路径行驶。
 
-::: tip STM32 example
-![STM32 example](./imgs/stm32.jpg)
-[STM32 example](https://www.amazon.sa/-/en/Nucleo-64-development-STM32F303RE-supports-connectivity/dp/B01N6EKDEF)
+::: tip STM32实例
+[./imgs/stm32.jpg](./imgs/stm32.jpg)
+[STM32实例](https://www.amazon.sa/-/en/Nucleo-64-development-STM32F303RE-supports-connectivity/dp/B01N6EKDEF)
 :::
 
-## Wheel Encoders
+#### 车轮编码器
 
-Wheel encoders in intelligent vehicles serve crucial functions in measuring and monitoring wheel motion, playing a significant role in applications such as odometry estimation, and precise positioning. Their main functions include:
+智能车辆中的车轮编码器在测量和监控车轮运动方面发挥着至关重要的作用，对于里程计估计、精确定位应用尤其重要。它们的主要功能包括：
 
-- Speed and Direction Measurement: Wheel encoders measure the speed and direction of the vehicle by detecting the rotation of the wheels. By monitoring the rotation of each wheel, the system can calculate the actual motion state of the vehicle.
+- 速度和方向测量：车轮编码器通过检测车轮的旋转来测量车辆的速度和方向。通过监测每个车轮的旋转，系统可以计算出车辆的实际运动状态。
 
-- Precise Positioning: Wheel encoders provide precise displacement information relative to the initial position of the vehicle. This is essential for navigation and positioning systems, especially in applications like autonomous driving and unmanned vehicles that require high-precision location information.
+- 精确定位：车轮编码器提供相对于车辆初始位置的精确位移信息。这对于导航和定位系统至关重要，特别是在自动驾驶和无人车辆等需要高精度位置信息的应用中。
 
-- Closed-Loop Control: In closed-loop control systems, feedback from wheel encoders is used to adjust the vehicle's motion, ensuring it travels along the predefined path and speed. This is crucial for achieving stable automatic control.
+- 闭环控制：在闭环控制系统中，来自车轮编码器的反馈被用来调整车辆的运动，确保它沿着预定义的路径和速度行驶。这对于实现稳定的自动控制至关重要。
 
-- Odometry Estimation: Wheel encoders can be used to estimate the mileage traveled by the vehicle. This is valuable for long-distance travel and path planning, ensuring that the vehicle reaches its destination according to the planned route.
+- 里程计估计：车轮编码器可用于估计车辆行驶的距离。这对于长途旅行和路径规划非常有价值，确保车辆按计划路线到达目的地。
 
-In summary, wheel encoders play a key role in smart cars, providing real-time information on position, speed, and direction. This enables precise navigation, control, and obstacle avoidance capabilities for the vehicle.
+总之，车轮编码器在智能汽车中扮演关键角色，提供位置、速度和方向的实时信息，使车辆具备精确导航、控制和避障能力。
 
-::: tip Wheel Encoders example
-![Wheel Encoders](./imgs/wheel_encoder.png)
-[Wheel Encoders example](https://www.baumer.com/us/en/product-overview/distance-measurement/measuring-wheel-encoders/c/292)
+::: tip 车轮编码器实例
+[./imgs/wheel_encoder.png](./imgs/wheel_encoder.png)
+[车轮编码器实例](https://www.baumer.com/us/en/product-overview/distance-measurement/measuring-wheel-encoders/c/292)
 :::
 
-## Ackermann Steering
+#### 阿克曼转向
 
-Ackermann steering is an engineering principle used in the design of vehicle steering systems, aiming to ensure that all wheels maintain a common turning radius during turns. This design method adjusts the steering angles of the vehicle's wheels, allowing the inner wheels to turn more than the outer wheels to accommodate varying turning radii. This steering mechanism is widely employed in motor vehicles, particularly in cars and some heavy-duty vehicles.
+阿克曼转向是一种工程原理，用于设计车辆转向系统，旨在确保所有车轮在转弯时保持相同的转弯半径。该设计方法调节车辆轮子的转向角度，使内侧轮在转弯时比外侧轮转得更多，以适应不同半径的转弯。这种转向机制广泛应用于机动车中，尤其是在轿车和某些重型车辆上。
 
-- Common Turning Radius: The goal of Ackermann steering is to have all wheels share a common turning radius during turns, enhancing vehicle stability and driving control.
+- 共同转弯半径：阿克曼转向的目标是在转弯时让所有车轮共享相同的转弯半径，增强车辆的稳定性和驾驶控制。
 
-- Greater Steering Angle for Inner Wheels: During turns, Ackermann steering requires the inner wheels to have a larger steering angle than the outer wheels. This is achieved through carefully designed tie rods and steering mechanisms.
+- 内侧轮更大的转向角：在转弯时，阿克曼转向要求内侧轮具有比外侧轮更大的转向角度。这是通过精心设计的拉杆和转向机构实现的。
 
-- Optimized Driving Stability: Ackermann steering design helps reduce lateral slip during turns, enhancing overall driving stability and maneuverability, especially during high-speed driving and sharp turns.
+- 优化驾驶稳定性：阿克曼转向设计有助于减少转弯时的侧滑，提高整体驾驶稳定性和操控性，特别是在高速行驶和急转弯时。
 
-::: tip Ackermann Steering example
-![Ackermann Steering](./imgs/ackermann_steering.svg.png)
-[Ackermann Steering example](https://en.wikipedia.org/wiki/Ackermann_steering_geometry)
+::: tip 阿克曼转向实例
+[./imgs/ackermann_steering.svg.png](./imgs/ackermann_steering.svg.png)
+[阿克曼转向实例](https://en.wikipedia.org/wiki/Ackermann_steering_geometry)
 :::
