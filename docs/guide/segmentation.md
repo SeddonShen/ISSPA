@@ -1,21 +1,19 @@
-# Segmentation
+### 分割
 
-The solution for autonomous driving perception involves not only object detection but also segmentation. These two solutions are often combined to provide a more comprehensive understanding of the environment. Vehicle segmentation is typically a subtask of semantic segmentation, as it involves not only locating objects but also classifying each pixel in the image. The results can be used to identify different objects in the environment around the vehicle, such as roads, pedestrians, vehicles, buildings, and more.
+自动驾驶感知解决方案不仅涉及目标检测，还包括分割。这两个解决方案经常结合使用，以提供对环境更全面的理解。车辆分割通常是语义分割的一个子任务，因为它不仅涉及定位物体，还涉及对图像中的每个像素进行分类。这些结果可用于识别车辆周围环境中的不同物体，如道路、行人、车辆、建筑物等。
 
-The results of semantic segmentation can also help the system recognize the location and type of obstacles, enabling the consideration of obstacle avoidance strategies during the path planning process. The system can choose to navigate around obstacles systematically or analyze semantic information to select a safer detour.
+语义分割的结果还可以帮助系统识别障碍物的位置和类型，使得在路径规划过程中能够考虑避障策略。系统可以选择系统地绕过障碍物或分析语义信息来选择更安全的绕行路线。
 
-- Camera based
-- LiDAR based
-- Fusion based
+- 基于摄像头
+- 基于激光雷达
+- 基于融合
 
-## Camera Based
+### 基于摄像头
 
-<a style="display: none;" rel="me" href="https://fosstodon.org/@readthedocs">Mastodon</a>
+#### 车辆分割
 
-### Vehicle Segmentation
-
-Vehicle segmentation is a task in autonomous driving aimed at accurately separating the area occupied by vehicles from images or videos. Its results can provide crucial perceptual information to autonomous driving systems, aiding vehicles in understanding the surrounding environment and making appropriate decisions.
+车辆分割是自动驾驶中的一项任务，旨在从图像或视频中精确分离出车辆所占的区域。其结果可以为自动驾驶系统提供关键的感知信息，帮助车辆理解周围环境并做出适当决策。
 
 ::: tip NOTE
-The BEV-based algorithm has undergone simulation testing in ISSPA and will be synchronized with the code repository as soon as possible.
+基于BEV（Bird's Eye View，鸟瞰图）的算法已在ISSPA中进行了模拟测试，并将尽快与代码仓库同步。
 :::

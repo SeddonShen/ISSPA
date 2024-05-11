@@ -37,13 +37,13 @@ cd /home/$USER/ISSPA
 catkin_make
 ```
 
-::: 提示 注意
+::: tip NOTE
 您也可以使用```catkin_make_isolated```或```catkin```进行编译。ROS提供了多种编译工具，它们之间的差异及优势说明可参考[此处](./compilation-tools)。
 :::
 
 执行```catkin_make```时，可能会遇到一些问题。常见的**问题与解决办法**可在此查阅[这里](./issue-and-troubleshooting)。
 
-::: 提示 温馨提示
+::: tip NOTE
 **请注意：** 在使用程序前，请记得刷新环境变量。或者将其添加到```~/.bashrc```文件中亦可。
 ```bash
 cd /home/$USER/ISSPA
