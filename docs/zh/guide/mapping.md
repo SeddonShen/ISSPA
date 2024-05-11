@@ -1,25 +1,23 @@
-# Mapping
+### 地图
 
-<a style="display: none;" rel="me" href="https://fosstodon.org/@readthedocs">Mastodon</a>
+#### 前言
 
-## Preface
+精确的环境表示对于自动驾驶汽车的操作极为关键。环境可以通过多种方式表示，比如二维网格地图、鸟瞰图（BEV）、三维点云、拓扑地图、高清地图等。
 
-An accurate representation of the surrounding environment significantly aids the operation of autonomous vehicles. There are various ways to represent the environment, such as through 2D grid maps, Bird's Eye View (BEV), 3D point cloud, topological maps, HD Maps, and more.
+不同级别的自动驾驶功能可以灵活选择合适的地图表示形式。每种类型的地图都有其优势：例如，网格地图存储空间小且易于创建，但缺乏车道线等语义信息；而高清地图内容丰富，但需要持续更新，并且随着地理覆盖范围的扩大，制作成本也会相应增加。
 
-Different levels of autonomous driving functionalities can flexibly choose the appropriate map representation. Each type of map has its own merits. For instance, grid maps have a small storage and are easy to create, but they lack semantic information like lane markings. On the other hand, high-definition maps, while rich in content, require continuous updates, and as the geographical area increases, production costs also escalate.
+鉴于ISSPA目前主要在其园区内部运营，因此主要采用网格地图。这些地图可通过2D SLAM、3D SLAM等方法获取，同时有多种成熟的SLAM方法可供选择，包括GMapping、Cartographer等。以下是一些演示结果。
 
-As ISSPA currently operates primarily within its campus, it predominantly utilizes grid maps. These maps can be obtained through methods such as 2D SLAM, 3D SLAM, and several well-established SLAM approaches are available, including GMapping, Cartographer, etc. Below are some demonstration results.
+#### 网格地图
 
-## Grid Map
+以下是ISCAS（中国科学院软件研究所）园区内生成的网格地图结果。
 
-The following is the result of grid map generation within the ISCAS (Institute of Software Chinese Academy of Sciences) campus.
+![./imgs/grid_map.png](./imgs/grid_map.png)
 
-![Grip Map example](./imgs/grid_map.png)
+**网格地图示例**
 
-**Grid Map example**
+网格地图是自动驾驶领域中用于表示环境的一种方式，它将周围环境划分为规则的网格单元，每个单元代表地图上的一个小区域。这种类型的地图常用于描绘车辆周围的环境，支持自动驾驶系统的感知、决策制定和路径规划等功能。
 
-Grid map is one representation of the environment used in the field of autonomous driving. It divides the surroundings into regular grid cells, with each cell representing a small area on the map. This type of map is commonly employed to depict the vehicle's surroundings, facilitating various functions within autonomous driving systems such as perception, decision-making, and path planning.
+网格地图特别适合于结构化地模拟环境。网格中的每个单元可以存储对应区域的状态或特征信息，使自动驾驶车辆能够理解和导航周围环境。这种表示法通常用于传感器融合，即来自激光雷达、雷达、摄像头等多种传感器的数据可以在网格单元内整合并解读。
 
-Grid maps are particularly useful for modeling the environment in a structured manner. Each cell in the grid can store information about the state or characteristics of the corresponding area, allowing the autonomous vehicle to understand and navigate its surroundings. This representation is often employed for sensor fusion, where data from various sensors, such as lidar, radar, and cameras, can be integrated and interpreted within the grid cells.
-
-What's more, the grid map provides a convenient framework for processing and analyzing spatial information, aiding in tasks such as obstacle detection, localization, and route planning. Its regular structure and ability to store heterogeneous data make it a valuable tool for enhancing the perception and decision-making capabilities of autonomous vehicles.
+此外，网格地图为处理和分析空间信息提供了一个便捷的框架，有助于执行障碍物检测、定位和路线规划等任务。其规则结构和存储异构数据的能力使之成为提升自动驾驶汽车感知与决策能力的宝贵工具。
