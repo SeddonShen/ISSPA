@@ -1,4 +1,8 @@
-# 导航模块
+# 导航
+
+<a style="display: none;" rel="me" href="https://fosstodon.org/@readthedocs">Mastodon</a>
+
+## 前言
 
 导航模块是自动驾驶车辆的关键组成部分，负责引导车辆从一个点移动到另一个点。它承担着诸如确定最佳整体路径（全局路径规划）、规划短期行动（局部路径规划）以及控制车辆实际如何移动等重要任务。
 
