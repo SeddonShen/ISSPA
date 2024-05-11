@@ -23,7 +23,7 @@ ISSPA的车辆底盘主要采用**阿克曼转向设计**，后方两个轮子�
 - 电机控制：MCU控制电机驱动器，调节电机的速度和方向。通过接收传感器反馈并执行控制算法（如PID），MCU确保车辆沿预定路径行驶。
 
 ::: tip STM32实例
-[./imgs/stm32.jpg](./imgs/stm32.jpg)
+![./imgs/stm32.jpg](./imgs/stm32.jpg)
 [STM32实例](https://www.amazon.sa/-/en/Nucleo-64-development-STM32F303RE-supports-connectivity/dp/B01N6EKDEF)
 :::
 
@@ -42,7 +42,7 @@ ISSPA的车辆底盘主要采用**阿克曼转向设计**，后方两个轮子�
 总之，车轮编码器在智能汽车中扮演关键角色，提供位置、速度和方向的实时信息，使车辆具备精确导航、控制和避障能力。
 
 ::: tip 车轮编码器实例
-[./imgs/wheel_encoder.png](./imgs/wheel_encoder.png)
+![./imgs/wheel_encoder.png](./imgs/wheel_encoder.png)
 [车轮编码器实例](https://www.baumer.com/us/en/product-overview/distance-measurement/measuring-wheel-encoders/c/292)
 :::
 
@@ -57,6 +57,6 @@ ISSPA的车辆底盘主要采用**阿克曼转向设计**，后方两个轮子�
 - 优化驾驶稳定性：阿克曼转向设计有助于减少转弯时的侧滑，提高整体驾驶稳定性和操控性，特别是在高速行驶和急转弯时。
 
 ::: tip 阿克曼转向实例
-[./imgs/ackermann_steering.svg.png](./imgs/ackermann_steering.svg.png)
+![./imgs/ackermann_steering.svg.png](./imgs/ackermann_steering.svg.png)
 [阿克曼转向实例](https://en.wikipedia.org/wiki/Ackermann_steering_geometry)
 :::
