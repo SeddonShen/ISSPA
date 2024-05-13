@@ -29,7 +29,7 @@ async function get_nodelist(host_url: string): Promise<void> {
 
 async function applyISSPA(password: string): Promise<void> {
   try {
-    const response = await fetch(`http://121.43.183.241:8000/apply/?password=${password}`);
+    const response = await fetch(`https://node.0vo.lol/http/121.43.183.241:8000/apply/?password=${password}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -69,7 +69,7 @@ async function applyISSPA(password: string): Promise<void> {
 
 
 onMounted(() => {
-  const host_url = 'http://121.43.183.241:8000/nodelist/';
+  const host_url = 'https://node.0vo.lol/http/121.43.183.241:8000/nodelist/';
   get_nodelist(host_url);
 });
 
