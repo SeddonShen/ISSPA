@@ -2,11 +2,11 @@
 layout: home
 
 title: ISSPA
-titleTemplate: ISSPA 智能自动驾驶系统
+titleTemplate: ISSPA 智能驾驶系统
 
 hero:
   name: ISSPA
-  text: ISSPA 智能自动驾驶系统
+  text: ISSPA 智能驾驶系统
   tagline: 物理实验平台
   actions:
     - theme: brand

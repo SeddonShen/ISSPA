@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  description: 'ISSPA 智能自动驾驶系统',
+  description: 'ISSPA 智能驾驶系统',
 
   themeConfig: {
     nav: nav(),
