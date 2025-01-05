@@ -38,6 +38,10 @@ function nav(): DefaultTheme.NavItem[] {
       text: 'Agents',
       link: '/agents',
       activeMatch: '/agents/'
+    },
+    {
+      text: 'Studio',
+      link: 'https://isspa-studio.vercel.app/'
     }
   ]
 }
