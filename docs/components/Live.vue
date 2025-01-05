@@ -63,7 +63,8 @@ onMounted(() => {
 <template>
   <div id="J_prismPlayer"></div>
   <Collapse :default-active-key="['1', '2']" style="margin: 5rem;">
-    <CollapseItem header="Automotive Software Innovation Center(ASIC), Chongqing, China" key="1">
+    <CollapseItem header="Institute of Software, Chinese Academy of Sciences(ISCAS), Beijing, China" key="1">
+    <!-- <CollapseItem header="Automotive Software Innovation Center(ASIC), Chongqing, China" key="1"> -->
       <Row class="grid-player" justify="center">
         <Col :span="10">
         <div id="J_prismPlayer1"></div>
@@ -77,9 +78,9 @@ onMounted(() => {
         </Col>
       </Row>
     </CollapseItem>
-    <CollapseItem header="Institute of Software, Chinese Academy of Sciences(ISCAS), Beijing, China" key="2">
+    <!-- <CollapseItem header="Institute of Software, Chinese Academy of Sciences(ISCAS), Beijing, China" key="2">
       <div>Coming soon...</div>
-    </CollapseItem>
+    </CollapseItem> -->
   </Collapse>
 
 </template>
