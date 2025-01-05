@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: alt
       text: View on GitHub
-      link: https://github.com/chenhengwei1999/ISSPA
+      link: https://github.com/iscas-tis/ISS-PA
     - theme: brand
       text: ISS Cloud Studio
       link: https://isspa-studio.vercel.app/

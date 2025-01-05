@@ -43,7 +43,7 @@ export const shared = defineConfig({
     logo: { src: '/logo-mini.svg', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/chenhengwei1999/ISSPA/' }
+      { icon: 'github', link: 'https://github.com/iscas-tis/ISS-PA' }
     ]
   }
 })
