@@ -38,14 +38,14 @@ async function applyISSPA(password: string): Promise<void> {
     if (data.password === false) {
       // 弹窗提示密码错误
       Notification.error({
-        title: '密码错误',
-        content: '请重新输入!',
+        title: 'incorrect password',
+        content: 'Please re-enter!',
       })
     } else if (data.status === false) {
       // 弹窗提示节点申请失败
       Notification.error({
-        title: '节点申请失败！',
-        content: '请联系管理员!',
+        title: 'Node application failed!',
+        content: 'Please contact the administrator!',
       })
     } else {
       // 弹出 pods_info 和 services_info 字段内容
@@ -53,10 +53,10 @@ async function applyISSPA(password: string): Promise<void> {
       console.log('Pods Info:', data.pods_info);
       console.log('Services Info:', data.services_info);
       Modal.success({
-        title: data.machine + '节点申请成功',
+        title: data.machine + 'Node Application Successful',
         content: `
-          在线RosBridge地址: ws://121.43.183.241:${data.services_info[1].nodePort} \n
-          在线VSCode地址: http://121.43.183.241:${data.services_info[2].nodePort}
+          Online RosBridge Link: ws://121.43.183.241:${data.services_info[1].nodePort} \n
+          Online VSCode Link: http://121.43.183.241:${data.services_info[2].nodePort}
         `,
       });
 
@@ -83,12 +83,12 @@ onMounted(() => {
     display: 'flex',
   }">
     <div v-for="node in nodeList" :key="node.name">
-      <Card :style="{ width: '320px' }" :title="node.name.toUpperCase()" class="card-isspa">
+      <Card :style="{ width: '200px' }" :title="node.name.toUpperCase()" class="card-isspa">
         <template #extra>
           <!-- <a-link>申请使用</a-link> -->
           <!-- <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">申请使用</a-link> -->
-          <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">{{ node.status === 'Unknown' ? '离线'
-    : '在线' }}</a-link>
+          <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">{{ node.status === 'Unknown' ? 'Offline'
+    : 'Online' }}</a-link>
         </template>
         <p v-if="node.nodeInfo">
           <b>Arch:</b> {{ node.nodeInfo.architecture }}<br>
@@ -102,10 +102,10 @@ onMounted(() => {
     </div>
   </div>
   <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <Input v-model="authorizationCode" :style="{ width: '30%' }" placeholder="ISS Cloud使用授权码" allow-clear></Input>
+    <Input v-model="authorizationCode" :style="{ width: '30%' }" placeholder="ISS Cloud Invitation Code" allow-clear></Input>
   </div>
   <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <Button @click="handleApplyISSPA" type="primary" long :style="{ width: '30%' }">申请使用ISS Cloud</Button>
+    <Button @click="handleApplyISSPA" type="primary" long :style="{ width: '30%' }">Apply for ISS Cloud</Button>
   </div>
 </template>
 <style scoped>
