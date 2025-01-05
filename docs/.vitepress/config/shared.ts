@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export const shared = defineConfig({
-  title: 'ISSPA',
+  title: 'ISS Cloud',
 
   lastUpdated: true,
   cleanUrls: true,

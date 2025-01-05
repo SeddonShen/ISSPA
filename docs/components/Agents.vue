@@ -102,10 +102,10 @@ onMounted(() => {
     </div>
   </div>
   <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <Input v-model="authorizationCode" :style="{ width: '30%' }" placeholder="ISSPA使用授权码" allow-clear></Input>
+    <Input v-model="authorizationCode" :style="{ width: '30%' }" placeholder="ISS Cloud使用授权码" allow-clear></Input>
   </div>
   <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <Button @click="handleApplyISSPA" type="primary" long :style="{ width: '30%' }">申请使用ISSPA</Button>
+    <Button @click="handleApplyISSPA" type="primary" long :style="{ width: '30%' }">申请使用ISS Cloud</Button>
   </div>
 </template>
 <style scoped>
