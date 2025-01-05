@@ -66,14 +66,12 @@ async function applyISSPA(password: string): Promise<void> {
   }
 }
 
-
-
 onMounted(() => {
   const host_url = 'https://node.seddon.lol/http/121.43.183.241:8000/nodelist/';
   get_nodelist(host_url);
 });
-
 </script>
+
 <template>
   <div :style="{
     boxSizing: 'border-box',
@@ -81,19 +79,17 @@ onMounted(() => {
     padding: '30px',
     backgroundColor: 'var(--color-fill-2)',
     display: 'flex',
+    flexWrap: 'wrap',
+    gap: '20px', // 设置卡片之间的间距
   }">
-    <div v-for="node in nodeList" :key="node.name">
-      <Card :style="{ width: '200px' }" :title="node.name.toUpperCase()" class="card-isspa">
+    <div v-for="node in nodeList" :key="node.name" :style="{ width: 'calc(33.33% - 20px)' }">
+      <Card :style="{ width: '100%' }" :title="node.name.toUpperCase()" class="card-isspa">
         <template #extra>
-          <!-- <a-link>申请使用</a-link> -->
-          <!-- <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">申请使用</a-link> -->
-          <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">{{ node.status === 'Unknown' ? 'Offline'
-    : 'Online' }}</a-link>
+          <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">{{ node.status === 'Unknown' ? 'Offline' : 'Online' }}</a-link>
         </template>
         <p v-if="node.nodeInfo">
           <b>Arch:</b> {{ node.nodeInfo.architecture }}<br>
-          <b>Operating System:</b> {{ node.nodeInfo.operatingSystem.charAt(0).toUpperCase() +
-    node.nodeInfo.operatingSystem.slice(1) }}<br>
+          <b>Operating System:</b> {{ node.nodeInfo.operatingSystem.charAt(0).toUpperCase() + node.nodeInfo.operatingSystem.slice(1) }}<br>
           <b>OS Image:</b> {{ node.nodeInfo.osImage }}<br>
           <b>Kernel Version:</b> {{ node.nodeInfo.kernelVersion }}<br>
           <b>Container Runtime Version:</b> {{ node.nodeInfo.containerRuntimeVersion }}<br>
@@ -108,9 +104,10 @@ onMounted(() => {
     <Button @click="handleApplyISSPA" type="primary" long :style="{ width: '30%' }">Apply for ISS Cloud</Button>
   </div>
 </template>
+
 <style scoped>
 .card-isspa {
-  width: 360px;
+  width: 100%;
   margin-left: 24px;
   transition-property: all;
 }
