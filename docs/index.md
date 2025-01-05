@@ -1,26 +1,23 @@
 ---
 layout: home
 
-title: ISSPA
+title: ISS Cloud
 titleTemplate: Intelligent Self-driving System empowering Physical Agents
 
 hero:
-  name: ISSPA
+  name: ISS Cloud
   text: Intelligent Self-driving System empowering Physical Agents
   tagline: An experimental platform for self-driving physical agents
   actions:
-    - theme: brand
-      text: Get Started
-      link: /guide/quick-start
     - theme: alt
       text: View on GitHub
       link: https://github.com/chenhengwei1999/ISSPA
-    - theme: alt
-      text: ISSPA Studio
-      link: https://isspa.0vo.lol
+    - theme: brand
+      text: ISS Cloud Studio
+      link: https://isspa-studio.vercel.app/
   image:
     src: /car.png
-    alt: ISSPA
+    alt: ISS Cloud
 
 features:
   - icon: 🛠️
@@ -31,7 +28,7 @@ features:
     details: Remote research and development in the cloud to browse visualization data like point cloud maps.
   - icon: 👨‍💻
     title: Code Tutorials
-    details: Introduces ISSPA in the form of code snippets so that you can use it easily.
+    details: Introduces ISS Cloud in the form of code snippets so that you can use it easily.
   - icon: 🔍
     title: Research Oriented
     details: Create an indoor sand table to simulate corner cases of automated driving, like damaged lane lines, for research.

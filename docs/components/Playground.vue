@@ -40,7 +40,7 @@ const loadPlayer = (video_url, player_id) => {
 
 onMounted(() => {
   console.log('mounted')
-  const host_url = 'https://getvideo.0vo.lol/'
+  const host_url = 'https://getvideo.seddon.lol/'
   
   get_video_url(host_url+'?app=ISSPA01').then(video_url => {
     setTimeout(() => {

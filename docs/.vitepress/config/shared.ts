@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { search as zhSearch } from './zh'
 
 export const shared = defineConfig({
   title: 'ISSPA',
@@ -21,7 +20,7 @@ export const shared = defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://iss.0vo.lol',
+    hostname: 'https://iss-cloud.seddon.lol',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
     }
@@ -45,16 +44,6 @@ export const shared = defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chenhengwei1999/ISSPA/' }
-    ],
-
-    search: {
-      provider: 'algolia',
-      options: {
-        appId: 'E8DNDI22Y5',
-        apiKey: 'b0eb246e9b415c8b76502cbe6527fe26',
-        indexName: 'iss-0vo',
-        locales: { ...zhSearch }
-      }
-    }
+    ]
   }
 })
