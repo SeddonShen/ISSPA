@@ -78,12 +78,12 @@ onMounted(() => {
   <div :style="{
     boxSizing: 'border-box',
     width: '100%',
-    padding: '40px',
+    padding: '30px',
     backgroundColor: 'var(--color-fill-2)',
     display: 'flex',
   }">
     <div v-for="node in nodeList" :key="node.name">
-      <Card :style="{ width: '360px' }" :title="node.name.toUpperCase()" class="card-isspa">
+      <Card :style="{ width: '320px' }" :title="node.name.toUpperCase()" class="card-isspa">
         <template #extra>
           <!-- <a-link>申请使用</a-link> -->
           <!-- <a-link :style="{ color: node.status === 'Unknown' ? 'red' : 'inherit' }">申请使用</a-link> -->

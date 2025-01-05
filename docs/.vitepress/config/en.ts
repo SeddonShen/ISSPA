@@ -30,9 +30,9 @@ export const en = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: 'Playground',
-      link: '/playground',
-      activeMatch: '/playground/'
+      text: 'Live',
+      link: '/live',
+      activeMatch: '/live/'
     },
     {
       text: 'Agents',
